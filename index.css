@@ -1,4 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+:root{
+    --body-font:  'Barlow Semi Condensed', sans-serif;
+    --background-color:  radial-gradient(134.34% 134.34% at 50% 0%, #1F3757 0%, #131537 100%);
+}
+
 *{
     margin: 0;
     padding: 0;
+}
+
+body{
+    background: var(--background-color);
+    height: 100vh;
+}
+
+#wrapper{
+    margin-top: 48px;
+
+}
+#score-board {
+    font-family: var(--body-font);
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    border:3px solid rgba(255, 255, 255, 0.289199);
+    border-radius: 15px;
+    max-width: 700px;
+    padding: 24px;
+}
+
+#score-board__heading{
+    line-height: 32px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+}
+
+#score-board__heading > h1 {
+    font-weight: 700;
+    font-size: 40px;
+}
+
+#score-board__value{
+    background:  linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    text-align: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+#score-board__value > p:nth-child(1) {
+    font-weight: 600;
+    font-size: 16px;
+    color:   #2A45C2;
+    text-transform: uppercase;
+    line-height: 19.2px;
+    letter-spacing: 2.5px;
+}
+
+#score-board__value > p:nth-child(2) {
+    font-weight: 700;
+    font-size: 64px;
+    color:    #565468;
+    line-height: 64px;
+}
+
+#main-board{
+    padding-top: 64px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+svg{
+    cursor: pointer;
+}
+
+#main-board__paper,#main-board__rock,#main-board__scissor{
+    transition: all 0.5s ease-in-out;
+}
+
+#main-board__paper:hover,#main-board__rock:hover,#main-board__scissor:hover{
+    transform: scale(1.09)
+
+}
+
+#play-again{
+    display: none;
+    font-weight: 600;
+    font-family: var(--body-font);
+    color: #DB2E4D;
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: 2.5px;
+    background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
+    border-radius: 8px;
+    width: 220px;
+
+    text-transform: uppercase;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
 }
