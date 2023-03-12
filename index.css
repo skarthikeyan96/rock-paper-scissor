@@ -102,9 +102,33 @@ svg{
     background: linear-gradient(0deg, #F3F3F3 0%, #FFFFFF 100%);
     border-radius: 8px;
     width: 220px;
-
     text-transform: uppercase;
     padding-top: 14px;
     padding-bottom: 14px;
+    border: none;
+}
 
+
+#game-board{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#final-text{
+    font-family: var(--body-font);
+    font-weight:  700;
+    font-size: 56px;
+    line-height: 67.2px;
+    color: #FFFFFF;
+}
+
+#player-choice-text, #computer-choice-text{
+    font-family: var(--body-font);
+    font-weight:  700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 3px;
+    color:  #fff;
+    padding-bottom: 2rem;
 }
