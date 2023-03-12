@@ -11,9 +11,11 @@ const playerChoiceElt = document.getElementById("player-choice");
 const paperSvg = paper.getElementsByTagName("svg")[0];
 const rockSvg = rock.getElementsByTagName("svg")[0];
 const scissorSvg = scissor.getElementsByTagName("svg")[0];
+const playerChoiceText = document.getElementById('player-choice-text')
+const computerChoiceText = document.getElementById('computer-choice-text')
 
-
-
+playerChoiceText.style.display = "none"
+computerChoiceText.style.display = "none"
 const computerPlay = (choice) => {
   switch (choice) {
     case 0:
@@ -108,7 +110,10 @@ const handleAfterPaperClick = () => {
 
   //  const finalScore = parseInt(`${parseInt(score)}${(scoreValue)}`);
   score.innerText = scoreValue;
+  playerChoiceText.style.display = "block"
+  computerChoiceText.style.display = "block"
   finalText.innerText = text
+  finalText.style.display = "block"
   // show the play again button
   playAgain.style.display = "block";
   playerChoiceElt.style.pointerEvents = "none";
@@ -123,6 +128,7 @@ const handleAfterPlayAgainClick = () => {
   computerChoiceElt.style.display = "none";
   playerChoiceElt.style.display = "none"
   playAgain.style.display = "none";
+  finalText.style.display = "none"
   computerChoiceElt.innerHTML = `<p id="computer-choice-text"> THE HOUSE PICKED </p>`;
   playerChoiceElt.innerHTML = ` <p id="player-choice-text"> YOU PICKED </p>`;
 };
@@ -153,7 +159,10 @@ const handleAfterRockClick = () => {
   const {scoreValue, text} = calculateScore("rock", options[computerChoice]);
 
   score.innerText = scoreValue;
+  playerChoiceText.style.display = "block"
+  computerChoiceText.style.display = "block"
   finalText.innerText = text
+  finalText.style.display = "block"
 
   // show the play again button
   playAgain.style.display = "block";
@@ -190,7 +199,10 @@ const handleAfterScissorClick = () => {
 
   //  const finalScore = parseInt(`${parseInt(score)}${(scoreValue)}`);
   score.innerText = scoreValue;
+  playerChoiceText.style.display = "block"
+  computerChoiceText.style.display = "block"
   finalText.innerText = text
+  finalText.style.display = "block"
 
   // show the play again button
   playAgain.style.display = "block";

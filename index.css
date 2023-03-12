@@ -13,7 +13,7 @@
 
 body{
     background: var(--background-color);
-    height: 100vh;
+    min-height: 100vh;
 }
 
 #wrapper{
